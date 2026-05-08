@@ -1,0 +1,25 @@
+{
+  "name": "webhook1.0",
+  "version": "1.0.0",
+  "description": "Meta Webhook receiver",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "build": "npm install --omit=dev",
+    "clean": "node -e \"const fs=require('fs');['logs','node_modules'].forEach(d=>{if(fs.existsSync(d))fs.rmSync(d,{recursive:true,force:true});console.log('Removed '+d);})\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

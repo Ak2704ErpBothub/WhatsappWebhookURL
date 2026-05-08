@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: webhook
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: VERIFY_TOKEN
+        sync: false
+      - key: LOG_LEVEL
+        value: info
+    disk:
+      name: logs
+      mountPath: /opt/render/project/src/logs
+      sizeGB: 1
