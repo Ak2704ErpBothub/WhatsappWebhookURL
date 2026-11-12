@@ -9,9 +9,15 @@ services:
         value: 3000
       - key: VERIFY_TOKEN
         sync: false
+      - key: API_KEY
+        sync: false
+      - key: APP_SECRET
+        sync: false
+      - key: DATA_DIR
+        value: /opt/render/project/src/data
       - key: LOG_LEVEL
         value: info
     disk:
-      name: logs
-      mountPath: /opt/render/project/src/logs
+      name: webhook-data
+      mountPath: /opt/render/project/src/data
       sizeGB: 1
